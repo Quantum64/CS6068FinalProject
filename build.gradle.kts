@@ -1,11 +1,12 @@
 plugins {
     kotlin("jvm") version "1.6.0"
+    id("com.github.johnrengelman.shadow") version "7.1.0"
     application
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.0-RC")
-    implementation("com.varabyte.konsole:konsole:0.9.0")
+    api("org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.0-RC")
+    api("com.varabyte.konsole:konsole:0.9.0")
 }
 
 repositories {
