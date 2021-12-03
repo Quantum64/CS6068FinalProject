@@ -16,6 +16,7 @@ import com.varabyte.konsole.foundation.text.textLine
 import com.varabyte.konsole.foundation.text.white
 import com.varabyte.konsole.foundation.text.yellow
 import com.varabyte.konsole.runtime.KonsoleApp
+import com.varabyte.konsole.terminal.SystemTerminal
 import kotlinx.coroutines.asCoroutineDispatcher
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
@@ -58,7 +59,7 @@ enum class MainMenuOption(
 }
 
 fun main() {
-    konsoleApp {
+    konsoleApp(SystemTerminal()) {
         konsole {
             yellow(isBright = true)
             textLine("Welcome to our CS6068 Parallel Computing Final Project!")
